@@ -5,8 +5,8 @@ let gridSize = 16;
 btn.addEventListener('click', function() { changeGrid(); });
 
 function changeGrid() {
-    gridSize = prompt("Enter the number from 1-100")
-    while (isNaN(gridSize) || gridSize < 0 || gridSize > 100){
+    gridSize = prompt("Enter a number from 1-100")
+    while (isNaN(gridSize) || gridSize < 0 || gridSize > 100 || gridSize === null){
         gridSize = prompt('Enter a number from 1-100');
     }
     removeAllChildNodes(container);
@@ -37,9 +37,13 @@ function buildGrid() {
 }
 
 function colorPicker() {
-    let randomColor = Math.floor(Math.random()*16777215).toString(16);
-    this.style.backgroundColor = '#' + randomColor;
+    if (!this.style.backgroundColor || this.style.opacity < .1){
+        let randomColor = Math.floor(Math.random()*16777215).toString(16);
+        this.style.backgroundColor = '#' + randomColor;
+        this.style.opacity = 1;
+    } else {
+        this.style.opacity -= .1;
+    }
 }
 
 buildGrid();
-
