@@ -21,6 +21,18 @@ button {
     padding: 5px;
 }
 
+.btns {
+    margin: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/* #colorpicker {
+    margin: 0;
+    padding: 0;
+} */
+
 .header {
     display: flex;
     justify-content: center;
