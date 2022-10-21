@@ -3,6 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <title>Etch-a-Sketch</title>
+        <link rel="icon" href="favicon.ico">
         <link rel="stylesheet" href="./css/style.css">
         <script src="./js/script.js" defer></script> 
     </head>
@@ -10,13 +11,16 @@
         <div class="header">
             <h1>Etch-a-Sketch</h1>
             <div class="btns">
-            <button id="changeGrid">Grid size</button>
-            <button id="erase">Erase</button>
-            <button id="clear">Clear</button>
-            <button id="random">Random</button>
-            <!-- <label for="colorpicker">Select color:</label> -->
-            <input type="color" id="userColor" name="userColor" value="#ff0000">
+            <button id="changeGrid" class="btn">Grid size</button>
+            <button id="clear" class="btn">Clear</button>
+            <button id="erase" class="btn">Erase</button>
+            <button id="random" class="btn">Random</button>
+            <button id="gradient" class="btn">Gradient</button>
+            <input type="color" id="manual" class="btn" name="manual" value="#ff0000">
         </div>
         </div>
-        <div id="container" width="960px"></div>
+        <div id="container"></div>
+        <footer class="footer">
+            <a href="https://www.flaticon.com/free-icons/etch-a-sketch" title="Etch a sketch icons">Etch a sketch icons created by Creaticca Creative Agency - Flaticon</a>
+        </footer>
     </body>
